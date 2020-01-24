@@ -1,0 +1,65 @@
+body, html {
+    height: 100%;
+}
+
+.blanco {
+    background-color: #FFFFFF;
+}
+body {
+    background-color: green;
+}
+
+ div {
+     h1 {
+        color: $text_color;
+        text-align: center;
+        font-size: 20px;
+    };
+    h2 {
+        color: black;
+        text-align: left;
+        font-size: 18px;
+        margin: 0px 0px 50px 10px;
+    };
+    h3 {
+        font-size: 15px;
+    }
+}
+
+.gris {
+    background-color: $background_color;
+}
+
+.row {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@each $size in $tamanos {
+    @debug $size;
+    $i : index($tamanos, $size);
+    #alto#{$i} {
+        height: $size;
+    }
+}
+@debug $hobbies;
+#redes {
+-webkit-border-radius: 22px 22px 22px 22px;
+-moz-border-radius: 22px 22px 22px 22px;
+border-radius: 22px 22px 22px 22px;
+margin: 30px;
+background-color: $redes;
+padding: 30px;
+color: #FFFFFF;
+}
+#hobbie {
+    -webkit-border-radius: 22px 22px 22px 22px;
+    -moz-border-radius: 22px 22px 22px 22px;
+    border-radius: 22px 22px 22px 22px;
+    margin: 30px;
+    background-color: $hobbies;
+    padding: 30px;
+    color: #FFF;
+}
